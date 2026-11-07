@@ -33,7 +33,7 @@
         </script>
     
     
-    <link rel="preload" as="style" href="https://kennethluciano900-ai.github.io/ado1024-mockup/build/assets/app-Gcdg0DWs.css" /><link rel="modulepreload" as="script" href="https://kennethluciano900-ai.github.io/ado1024-mockup/build/assets/app-BGJy4g7v.js" /><link rel="stylesheet" href="https://kennethluciano900-ai.github.io/ado1024-mockup/build/assets/app-Gcdg0DWs.css" /><script type="module" src="https://kennethluciano900-ai.github.io/ado1024-mockup/build/assets/app-BGJy4g7v.js"></script></head>
+    <link rel="preload" as="style" href="https://kennethluciano900-ai.github.io/ado1024-mockup/build/assets/app-CosIIq8_.css" /><link rel="modulepreload" as="script" href="https://kennethluciano900-ai.github.io/ado1024-mockup/build/assets/app-C4KF_4jJ.js" /><link rel="stylesheet" href="https://kennethluciano900-ai.github.io/ado1024-mockup/build/assets/app-CosIIq8_.css" /><script type="module" src="https://kennethluciano900-ai.github.io/ado1024-mockup/build/assets/app-C4KF_4jJ.js"></script></head>
 <body class="min-h-dvh bg-navy-950 font-sans text-slate-200 antialiased">
     <a href="#main" class="sr-only z-50 rounded-full bg-white px-4 py-2 font-semibold text-navy-950 focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Langsung ke konten</a>
 
@@ -141,12 +141,12 @@
         <a href="https://kennethluciano900-ai.github.io/ado1024-mockup" class="flex items-center gap-2.5 rounded-lg text-white focus-visible:outline-2 focus-visible:outline-sky-300">
             <svg class="h-7 w-9" viewBox="0 0 64 48" aria-hidden="true">
     <defs>
-        <linearGradient id="wing-6aee9459314a3" x1="0" y1="0" x2="1" y2="1">
+        <linearGradient id="wing-6aee9b289ae86" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0" stop-color="#93c5fd" />
             <stop offset="1" stop-color="#fda4af" />
         </linearGradient>
     </defs>
-    <g fill="url(#wing-6aee9459314a3)">
+    <g fill="url(#wing-6aee9b289ae86)">
         <path d="M31 22C26 10 14 2 6 4c-6 2-4 12 2 17 6 4 15 4 23 1z" />
         <path d="M33 22c5-12 17-20 25-18 6 2 4 12-2 17-6 4-15 4-23 1z" />
         <path d="M31 25c-7 1-15 5-17 11-2 6 4 9 9 6 4-3 7-10 8-17z" opacity=".8" />
@@ -304,7 +304,7 @@
                             <p class="mt-4 rounded-2xl border border-sky-300/30 bg-sky-300/5 px-4 py-3 text-sm text-slate-200">Acara ini berbayar (Rp 75.000). Setelah mendaftar, kamu punya 60 menit untuk membayar lewat QRIS dan mengunggah bukti pembayarannya.</p>
             
             
-            <form class="card mt-6 space-y-6 p-6 sm:p-8" x-data="signupForm" @submit.prevent="window.location.href = 'https:\/\/kennethluciano900-ai.github.io\/ado1024-mockup\/ticket\/sample-paid'">
+            <form class="card mt-6 space-y-6 p-6 sm:p-8" x-data @submit.prevent="window.location.href = 'https:\/\/kennethluciano900-ai.github.io\/ado1024-mockup\/ticket\/sample-paid'">
                 <div>
                     <label for="name" class="block text-sm font-bold text-white">Nama lengkap</label>
                     <input id="name" name="name" type="text" autocomplete="name" required class="field mt-2">
@@ -322,23 +322,20 @@
                     <p id="email-hint" class="mt-1.5 text-xs text-slate-400">Tiketmu dikirim ke sini.</p>
                 </div>
 
-                <div class="grid gap-6 sm:grid-cols-2">
-                    <div>
-                        <label for="city" class="block text-sm font-bold text-white">Kota asal</label>
-                        <input id="city" name="city" type="text" autocomplete="address-level2" required class="field mt-2">
-                    </div>
-                    <div>
-                        <label for="birthdate" class="block text-sm font-bold text-white">Tanggal lahir</label>
-                        <input id="birthdate" name="birthdate" type="date" x-model="birthdate" required class="field mt-2" aria-describedby="birthdate-hint">
-                    </div>
-                </div>
-                <p id="birthdate-hint" class="-mt-3 text-xs text-slate-400">Peserta di bawah 18 tahun perlu izin orang tua atau wali.</p>
-
                 
-                <label x-show="under18" x-cloak class="flex items-start gap-3 rounded-2xl border border-sky-300/30 bg-sky-300/5 p-4 text-sm text-slate-200">
-                    <input type="checkbox" name="guardian_agrees" :required="under18" class="mt-0.5 size-5 shrink-0 accent-sky-300">
-                    <span>Saya belum 18 tahun. Orang tua atau wali saya tahu dan mengizinkan saya ikut acara ini serta mengisi data ini.</span>
-                </label>
+                <fieldset>
+                    <legend class="text-sm font-bold text-white">Usia</legend>
+                    <div class="mt-2 space-y-2">
+                                                    <label class="flex cursor-pointer items-start gap-3 rounded-xl border border-white/15 bg-navy-950/60 px-4 py-3 text-sm text-slate-200 has-checked:border-sky-300 has-checked:bg-sky-300/10">
+                                <input type="radio" name="age" value="adult" required class="mt-0.5 size-5 shrink-0 accent-sky-300">
+                                <span>Saya berusia 18 tahun atau lebih</span>
+                            </label>
+                                                    <label class="flex cursor-pointer items-start gap-3 rounded-xl border border-white/15 bg-navy-950/60 px-4 py-3 text-sm text-slate-200 has-checked:border-sky-300 has-checked:bg-sky-300/10">
+                                <input type="radio" name="age" value="minor" required class="mt-0.5 size-5 shrink-0 accent-sky-300">
+                                <span>Saya belum 18 tahun, dan orang tua atau wali saya tahu dan mengizinkan saya ikut acara ini serta mengisi data ini</span>
+                            </label>
+                                            </div>
+                </fieldset>
 
                 <div>
                     <label for="question" class="block text-sm font-bold text-white">Merch apa yang ingin kamu tukar? (opsional)</label>
@@ -376,12 +373,12 @@
             <a href="https://kennethluciano900-ai.github.io/ado1024-mockup" class="font-display inline-flex items-center gap-2.5 text-lg font-bold text-white">
                 <svg class="h-7 w-9" viewBox="0 0 64 48" aria-hidden="true">
     <defs>
-        <linearGradient id="wing-6aee9459320b0" x1="0" y1="0" x2="1" y2="1">
+        <linearGradient id="wing-6aee9b289ba3b" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0" stop-color="#93c5fd" />
             <stop offset="1" stop-color="#fda4af" />
         </linearGradient>
     </defs>
-    <g fill="url(#wing-6aee9459320b0)">
+    <g fill="url(#wing-6aee9b289ba3b)">
         <path d="M31 22C26 10 14 2 6 4c-6 2-4 12 2 17 6 4 15 4 23 1z" />
         <path d="M33 22c5-12 17-20 25-18 6 2 4 12-2 17-6 4-15 4-23 1z" />
         <path d="M31 25c-7 1-15 5-17 11-2 6 4 9 9 6 4-3 7-10 8-17z" opacity=".8" />
